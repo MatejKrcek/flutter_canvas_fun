@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -112,6 +114,12 @@ class MyPainter extends CustomPainter {
       ..moveTo(50, 300)
       ..relativeQuadraticBezierTo(100, -150, 300, 0);
     canvas.drawPath(qCurve1, paint);
+
+    final qCurve2 = Path()
+      ..moveTo(300, 300)
+      ..relativeQuadraticBezierTo(100, 100, 50, -100);
+    
+    canvas.drawPath(qCurve2, paint);
   }
 
   @override
